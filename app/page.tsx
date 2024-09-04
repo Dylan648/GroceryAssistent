@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "./Button";
 
 
@@ -16,14 +17,20 @@ export default function Home() {
         </div>
         <div className="flex justify-center pt-6 gap-x-11">
           <Button text="Assistent"></Button>
-          <Button text="List"></Button>
+          <Link href="/list">
+            <Button text="List"></Button>
+          </Link>
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="realative bg-white rounded-3xl w-3/4 flex justify-center items-center h-12 z-20 -mt-6">
-          <p className="text-black text-opacity-40">Search Here</p>
+        <div className="realative bg-white rounded-3xl w-3/4 flex justify-center items-center h-12 z-20 -mt-6 max-w-3/4">
+          <input className="w-full rounded-2xl text-center placeholder-gray-500" placeholder="Search Here"></input>
         </div>
       </div>
+      <div className="flex justify-center pt-6">
+        <Button text="Search"></Button>
+      </div>
+      
     </>
   );
 }
